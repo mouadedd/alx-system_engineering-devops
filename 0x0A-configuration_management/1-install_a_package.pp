@@ -1,6 +1,6 @@
-#!/usr/bin/pup
-# Ensure Python 3 and pip3 are installed
+# install flask from pip3
+
 package { 'flask':
   ensure   => '2.1.0',
-  provider => 'pip3',
+  provider => 'pip3'
 }
