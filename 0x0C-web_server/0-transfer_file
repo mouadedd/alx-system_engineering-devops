@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Description: Transfer a file from one location to another using SCP (Secure Copy Protocol).
+# Usage: ./script.sh <source_file_path> <server_ip> <username> <ssh_private_key_path>
+#
+# Arguments:
+#   <source_file_path>: The path to the file to be transferred.
+#   <server_ip>: The IP address of the server to transfer the file to.
+#   <username>: The username to use for the SCP connection.
+#   <ssh_private_key_path>: The path to the SSH private key file used for authentication.
+
+if [ $# -lt 4 ]
+then
+  echo "Usage: 0-transfer_file PATH_TO_FILE IP USERNAME PATH_TO_SSH_KEY"
+else
+  scp -o StrictHostKeyChecking=no -i "$4" "$1" "$3@$2":~
+fi
