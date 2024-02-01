@@ -1,4 +1,4 @@
-#!/usr/bin/env basoh
+#!/usr/bin/env bash
 #Configure your domain zone
 
 domain_information () {
