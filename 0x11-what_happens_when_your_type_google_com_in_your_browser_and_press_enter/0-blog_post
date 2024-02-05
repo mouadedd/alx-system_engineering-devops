@@ -1,0 +1,22 @@
+Title: Unveiling the Journey: What Happens When You Type https://www.google.com in Your Browser?
+
+Introduction:
+In this blog post, we will unravel the process of bringing the Google homepage to the browser, covering everything from DNS requests to the inner workings of web servers, application servers, and databases.
+
+The journey begins with a Domain Name System (DNS) request. Your browser needs to translate the human-readable "www.google.com" into an IP address. If the translation is not already cached, a DNS query is sent to resolve the domain.
+
+Once armed with the IP address, a Transmission Control Protocol (TCP) connection is established using a three-way handshake. This ensures a reliable and ordered connection between your browser and Google's servers.
+
+As the connection is established, it may encounter firewalls, which act as gatekeepers protecting the server from unauthorized access. The firewall examines the incoming request and allows or denies access based on predefined rules.
+
+Given the emphasis on online security, most websites, including Google, use HTTPS (Hypertext Transfer Protocol Secure) to encrypt data in transit. The Secure Sockets Layer (SSL) or its successor, Transport Layer Security (TLS), initiates a handshake to establish an encrypted connection between your browser and Google's servers.
+
+To efficiently manage user traffic and distribute it among multiple servers, a load-balancer comes into play. Google, being a massive platform, employs load-balancing techniques to ensure optimal resource utilization and prevent server overload.
+
+Once past the load-balancer, your request reaches a web server. This server handles the initial processing, serving static content like HTML, CSS, and images. Google's web servers are designed for high performance and reliability.
+
+For dynamic content and interactivity, the request moves to an application server. Here, server-side processing takes place, executing scripts, handling user authentication, and generating personalized content. Google's application servers contribute to the dynamic nature of its services.
+
+For services like Google Search, which involve retrieving specific information, a database comes into play. The application server queries the database to fetch relevant data, completing the loop in delivering personalized and accurate search results.
+
+The seemingly simple act of typing "https://www.google.com" and pressing Enter sets off a chain reaction involving DNS, TCP/IP, firewalls, HTTPS/SSL, load-balancers, web servers, application servers, and databases. The collaborative efforts of these components ensure a seamless, secure, and efficient user experience, illustrating the complexity that underlies the seemingly instantaneous display of the Google homepage on your browser.
