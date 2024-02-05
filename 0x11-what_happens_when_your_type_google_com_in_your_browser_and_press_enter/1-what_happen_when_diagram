@@ -1,0 +1,33 @@
+your Browser
+   |
+   |
+   v
+DNS Request
+   |
+   |
+   v
+   +--------------+      +---------------+       +--------------+
+   | DNS Resolver |----->|   Firewall    |------>| Load Balancer|
+   +--------------+      +---------------+       +--------------+
+   |                  |  |                 |     |              |
+   v                  v  v                 v     v              v
+   |                  |  |                 |     |              |
+   v                  v  v                 v     v              v
+TCP/IP Handshake     |  | HTTPS/SSL        |     | Web Server   |
+   |                  |  | Handshake       |     +--------------+
+   v                  |  v                 |     |              |
+   |                  |  |                 |     v              v
+   +------------------+  +-----------------+     | Application  |
+   |                                       |     | Server       |
+   |                                       |     +--------------+
+   |                                       |     |              |
+   |                                       |     v              v
+   |                                       |     |   Database   |
+   |                                       |     +--------------+
+   |                                       |
+   +---------------------------------------+
+   |
+   |
+   |
+   v
+   Display Google Homepage
