@@ -1,6 +1,5 @@
-Title: Unveiling the Journey: What Happens When You Type https://www.google.com in Your Browser?
+Unveiling the Journey: Type https://www.google.com and press Enter
 
-Introduction:
 In this blog post, we will unravel the process of bringing the Google homepage to the browser, covering everything from DNS requests to the inner workings of web servers, application servers, and databases.
 
 The journey begins with a Domain Name System (DNS) request. Your browser needs to translate the human-readable "www.google.com" into an IP address. If the translation is not already cached, a DNS query is sent to resolve the domain.
