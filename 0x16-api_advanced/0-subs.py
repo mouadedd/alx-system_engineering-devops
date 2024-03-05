@@ -9,6 +9,6 @@ def number_of_subscribers(subreddit):
     """number of subscribers on a subreddit"""
     r = requests.get('http://www.reddit.com/r/{}/about.json'.format(subreddit),
                      headers={'User-Agent': 'Python/requests:APIproject:\
-    v1.0.0 (by /u/bdov_)'}).json()
+    v1.0.0 (by /u/smakosh)'}).json()
     subs = r.get("data", {}).get("subscribers", 0)
     return subs
