@@ -7,10 +7,8 @@ import requests
 
 def number_of_subscribers(subreddit):
     """number of subscribers on a subreddit"""
-    url = "https://www.reddit.com/r/{}/about.json".format(subreddit)
-    headers = {"User-Agent": "linux:0x16.api.advanced:v1.0.0 (by /u/smakosh)"}
-    response = requests.get(url, headers=headers, allow_redirects=False)
-    if response.status_code == 404:
-        return 0
-    result = response.json().get("data")
-    return result.get("subscribers")
+    r = requests.get('http://www.reddit.com/r/{}/about.json'.format(subreddit),
+                     headers={'User-Agent': 'Python/requests:APIproject:\
+    v1.0.0 (by /u/smakosh)'}).json()
+    subs = r.get("data", {}).get("subscribers", 0)
+    return subs
